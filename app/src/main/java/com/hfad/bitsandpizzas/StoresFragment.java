@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 
 public class StoresFragment extends OrderFragment {
 
-    public StoresFragment(){
+    public StoresFragment() {
         super(R.array.stores);
     }
 }

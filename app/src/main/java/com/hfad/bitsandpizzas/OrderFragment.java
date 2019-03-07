@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 
 public abstract class OrderFragment extends ListFragment {
 
-    protected int listType;
+    private int listType;
 
     public OrderFragment(int listType) {
         this.listType = listType;
