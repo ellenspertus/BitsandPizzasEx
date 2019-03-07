@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class SectionsPagerAdapter extends FragmentPagerAdapter {
-        private static final int NUM_TABS = 4;
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
