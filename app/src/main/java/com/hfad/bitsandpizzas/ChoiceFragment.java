@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 
 public abstract class ChoiceFragment extends ListFragment {
 
-    protected int ARRAY;
+    private int ARRAY_ID;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -17,9 +17,13 @@ public abstract class ChoiceFragment extends ListFragment {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 inflater.getContext(),
                 android.R.layout.simple_list_item_1,
-                getResources().getStringArray(ARRAY));
+                getResources().getStringArray(ARRAY_ID));
         setListAdapter(adapter);
         return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
+    public void setArrayId(int id) {
+        this.ARRAY_ID = id;
     }
 
 }
