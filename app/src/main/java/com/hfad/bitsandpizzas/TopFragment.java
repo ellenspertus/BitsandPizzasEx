@@ -1,23 +1,16 @@
 package com.hfad.bitsandpizzas;
 
-
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.support.v4.app.ListFragment;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
-public class TopFragment extends Fragment {
-
+public abstract class TopFragment extends ListFragment {
 
     public TopFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,5 +18,4 @@ public class TopFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_top, container, false);
     }
-
 }
