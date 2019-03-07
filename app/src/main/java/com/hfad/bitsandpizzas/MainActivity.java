@@ -75,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             switch (position) {
-//                case 0:
-//                    return new TopFragment();
+                case 0:
+                    return new TopFragment();
                 case 1:
                     return new PizzaFragment();
                 case 2:
