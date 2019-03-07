@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class SectionsPagerAdapter extends FragmentPagerAdapter {
-        private static final int NUM_TABS = 4;
+        private static final int NUM_TABS = 5;
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -78,10 +78,12 @@ public class MainActivity extends AppCompatActivity {
                 case 0:
                     return new TopFragment();
                 case 1:
-                    return new PizzaFragment();
+                    return new AppetizerFragment();
                 case 2:
-                    return new PastaFragment();
+                    return new PizzaFragment();
                 case 3:
+                    return new PastaFragment();
+                case 4:
                     return new StoresFragment();
             }
             return null;
@@ -93,10 +95,12 @@ public class MainActivity extends AppCompatActivity {
                 case 0:
                     return getResources().getText(R.string.home_tab);
                 case 1:
-                    return getResources().getText(R.string.pizza_tab);
+                    return getResources().getText(R.string.appetizer_tab);
                 case 2:
-                    return getResources().getText(R.string.pasta_tab);
+                    return getResources().getText(R.string.pizza_tab);
                 case 3:
+                    return getResources().getText(R.string.pasta_tab);
+                case 4:
                     return getResources().getText(R.string.store_tab);
             }
             return null;
