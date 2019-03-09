@@ -16,9 +16,13 @@ Challenge:
 Double challenge:  
 - [x] Ditto for getItem()
 
+- [x] Push commits to Github.
+- [x] Submit pull request.
 
 ## Issues Encountered
-* I had a hard time getting my new appetizers tab on the toolbar. I eventually figured out I
-needed to change NUM_TABS to 5. I assumed NUM_TABS is passed up to the super class at some point to
-tell it how many columns to render. I confirmed this in the HFAD book where it says that the number
-is indeed passed up, via the getCount method (page 491).
+* I had a hard time getting my new appetizers tab on the toolbar; the issue was that I did not know I
+needed to change NUM_TABS to 5. I discovered this in HFAD (page 491) where it says that the number
+is passed up to the super class via the getCount method so the toolbar knows how many buttons to create.
+
+## Time Taken
+~2 hours.
