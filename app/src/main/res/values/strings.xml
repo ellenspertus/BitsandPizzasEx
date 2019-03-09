@@ -26,9 +26,9 @@
     <string name="store_tab">Stores</string>
 
     <string-array name="tabs">
-        <item>Home</item>
-        <item>Pizzas</item>
-        <item>Pasta</item>
-        <item>Stores</item>
+        <item>@string/home_tab</item>
+        <item>@string/store_tab</item>
+        <item>@string/pizza_tab</item>
+        <item>@string/store_tab</item>
     </string-array>
 </resources>
