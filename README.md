@@ -5,8 +5,8 @@
 - [x] Test and commit.
 - [x] Refactor PastaFragment, PizzaFragment, and StoresFragment by moving common code into a new abstract superclass.
 - [x] Test and commit.
-- [ ] Add another screen (e.g., AppetizerFragment). 
-- [ ] Test and commit.
+- [x] Add another screen (e.g., AppetizerFragment).
+- [x] Test and commit.
 
 Challenge:  
 - [ ] Improve MainActivity.SectionsPagerAdapter (possibly moving code elsewhere).
@@ -15,3 +15,10 @@ Challenge:
 
 Double challenge:  
 - [ ] Ditto for getItem()
+
+
+## Issues Encountered
+* I had a hard time getting my new "appies" tab on the toolbar. I figured out I needed to change
+NUM_TABS to 5. I assumed NUM_TABS is passed up to the super class at some point to tell it how
+many columns to render, and I confirmed this in the HFAD book where it says that the number is
+passed up in the getCount method (page 491).
