@@ -1,7 +1,7 @@
 # Exercise for Mobile Application Development
 
 ## To Do
-- [ ] Remove magic number from MainActivity.SectionsPagerAdapter.  
+- [x] Remove magic number from MainActivity.SectionsPagerAdapter.
 - [ ] Test and commit.
 - [ ] Refactor PastaFragment, PizzaFragment, and StoresFragment by moving common code into a new abstract superclass. 
 - [ ] Test and commit.
