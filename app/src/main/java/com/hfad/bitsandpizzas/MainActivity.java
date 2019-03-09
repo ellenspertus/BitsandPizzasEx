@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
+    private static int numTabs;
     private ShareActionProvider shareActionProvider;
 
     @Override
@@ -61,48 +62,47 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class SectionsPagerAdapter extends FragmentPagerAdapter {
-        private static final int NUM_TABS = 4;
-
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
         @Override
         public int getCount() {
-            return 4;
+            if (numTabs == 0) {
+                numTabs = getResources().getStringArray(R.array.tabs).length;
+            }
+            return numTabs;
         }
 
         @Override
         public Fragment getItem(int position) {
-            switch (position) {
-                case 0:
-                    return new TopFragment();
-                case 1:
-                    return new PizzaFragment();
-                case 2:
-                    return new PastaFragment();
-                case 3:
-                    return new StoresFragment();
+            CharSequence title = getPageTitle(position);
+            if (title == null) {
+                return null;
             }
-            return null;
+
+            if (title.equals(getResources().getString(R.string.home_tab))) {
+                return new TopFragment();
+            } else if (title.equals(getResources().getString(R.string.pizza_tab))) {
+                return new PizzaFragment();
+            } else if (title.equals(getResources().getString(R.string.pasta_tab))) {
+                return new PastaFragment();
+            } else if (title.equals(getResources().getString(R.string.store_tab))) {
+                return new StoresFragment();
+            } else {
+                return null;
+            }
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return getResources().getText(R.string.home_tab);
-                case 1:
-                    return getResources().getText(R.string.pizza_tab);
-                case 2:
-                    return getResources().getText(R.string.pasta_tab);
-                case 3:
-                    return getResources().getText(R.string.store_tab);
+            if (position >= 0 && position < getCount()) {
+                return getResources().getStringArray(R.array.tabs)[position];
+            } else {
+                return null;
             }
-            return null;
         }
     }
-
 }
 
 
