@@ -1,5 +1,6 @@
 package com.hfad.bitsandpizzas;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,5 +26,21 @@ public abstract class AbstractMenuFragment extends ListFragment {
                 getResources().getStringArray(id));
         setListAdapter(adapter);
         return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
+    public static Fragment makeMenuFragment(String fragType){
+        switch (fragType) {
+            case "Home":
+                return new TopFragment();
+            case "Pizzas":
+                return new PizzaFragment();
+            case "Pasta":
+                return new PastaFragment();
+            case "Stores":
+                return new StoresFragment();
+            case "Appies":
+                return new AppetizersFragment();
+        }
+        return null;
     }
 }

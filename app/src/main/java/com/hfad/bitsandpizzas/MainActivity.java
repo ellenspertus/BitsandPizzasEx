@@ -62,9 +62,11 @@ public class MainActivity extends AppCompatActivity {
 
     private class SectionsPagerAdapter extends FragmentPagerAdapter {
         private static final int NUM_TABS = 5;
+        private String[] OPTIONS;
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
+            OPTIONS = getResources().getStringArray(R.array.options);
         }
 
         @Override
@@ -74,39 +76,14 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            switch (position) {
-                case 0:
-                    return new TopFragment();
-                case 1:
-                    return new PizzaFragment();
-                case 2:
-                    return new PastaFragment();
-                case 3:
-                    return new StoresFragment();
-                case 4:
-                    return new AppetizersFragment();
-            }
-            return null;
+            return AbstractMenuFragment.makeMenuFragment((OPTIONS[position]));
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return getResources().getText(R.string.home_tab);
-                case 1:
-                    return getResources().getText(R.string.pizza_tab);
-                case 2:
-                    return getResources().getText(R.string.pasta_tab);
-                case 3:
-                    return getResources().getText(R.string.store_tab);
-                case 4:
-                    return getResources().getText(R.string.appetizers_tab);
-            }
-            return null;
+            return OPTIONS[position];
         }
     }
-
 }
 
 
