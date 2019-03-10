@@ -14,6 +14,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ResourceBundle;
+
 public class MainActivity extends AppCompatActivity {
     private ShareActionProvider shareActionProvider;
 
@@ -74,16 +76,17 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            switch (position) {
-                case 0:
+            String[] tabs = getResources().getStringArray(R.array.tabs);
+            switch (tabs[position]) {
+                case "Home":
                     return new TopFragment();
-                case 1:
+                case "Pizza":
                     return new PizzaFragment();
-                case 2:
+                case "Pasta":
                     return new PastaFragment();
-                case 3:
+                case "Stores":
                     return new StoresFragment();
-                case 4:
+                case "Apps":
                     return new AppetizerFragment();
             }
             return null;
@@ -91,19 +94,11 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return getResources().getText(R.string.home_tab);
-                case 1:
-                    return getResources().getText(R.string.pizza_tab);
-                case 2:
-                    return getResources().getText(R.string.pasta_tab);
-                case 3:
-                    return getResources().getText(R.string.store_tab);
-                case 4:
-                    return "Apps";
+            String[] tabs = getResources().getStringArray(R.array.tabs);
+            if (position < 0 || position >= NUM_TABS) {
+                return null;
             }
-            return null;
+            return tabs[position];
         }
     }
 

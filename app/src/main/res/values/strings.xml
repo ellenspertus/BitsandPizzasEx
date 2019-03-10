@@ -12,7 +12,7 @@
 
     <string-array name="pasta">
         <item>Spaghetti Bolognese</item>
-        <item>Lasagne</item>
+        <item>Lasagna</item>
     </string-array>
 
     <string-array name="stores">
@@ -25,12 +25,11 @@
         <item>Breadsticks (unlim)</item>
     </string-array>
 
-    <string name="home_tab">Home</string>
-    <string name="pizza_tab">Pizzas</string>
-    <string name="pasta_tab">Pasta</string>
-    <string name="store_tab">Stores</string>
-    <string name="appetizer_tab">Appetizers</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="tabs">
+        <item>Home</item>
+        <item>Apps</item>
+        <item>Pizza</item>
+        <item>Pasta</item>
+        <item>Stores</item>
+    </string-array>
 </resources>
