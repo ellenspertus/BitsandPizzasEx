@@ -25,11 +25,12 @@
         <item>Onion rings</item>
     </string-array>
 
-    <string name="home_tab">Home</string>
-    <string name="pizza_tab">Pizzas</string>
-    <string name="pasta_tab">Pasta</string>
-    <string name="store_tab">Stores</string>
+    <string-array name="tab_titles">
+        <item>Home</item>
+        <item>Pizzas</item>
+        <item>Pasta</item>
+        <item>Stores</item>
+        <item>Appetizers</item>
+    </string-array>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
