@@ -20,6 +20,11 @@
         <item>Sebastopol</item>
     </string-array>
 
+    <string-array name="appetizers">
+        <item>Mozzy Stix</item>
+        <item>Onion rings</item>
+    </string-array>
+
     <string name="home_tab">Home</string>
     <string name="pizza_tab">Pizzas</string>
     <string name="pasta_tab">Pasta</string>
