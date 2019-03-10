@@ -61,27 +61,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class SectionsPagerAdapter extends FragmentPagerAdapter {
-        private static final int NUM_TABS = 4;
+        private String[] TABS;
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
+            TABS = getResources().getStringArray(R.array.tabs);
         }
 
         @Override
         public int getCount() {
-            return 4;
+            return TABS.length;
         }
 
         @Override
         public Fragment getItem(int position) {
-            switch (position) {
-                case 0:
+            switch (TABS[position]) {
+                case "Home":
                     return new TopFragment();
-                case 1:
+                case "Breads":
+                    return new BreadFragment();
+                case "Pizzas":
                     return new PizzaFragment();
-                case 2:
+                case "Pasta":
                     return new PastaFragment();
-                case 3:
+                case "Stores":
                     return new StoresFragment();
             }
             return null;
@@ -89,17 +92,11 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return getResources().getText(R.string.home_tab);
-                case 1:
-                    return getResources().getText(R.string.pizza_tab);
-                case 2:
-                    return getResources().getText(R.string.pasta_tab);
-                case 3:
-                    return getResources().getText(R.string.store_tab);
+            try {
+                return TABS[position];
+            } catch (NullPointerException exception) {
+                return null;
             }
-            return null;
         }
     }
 
