@@ -91,22 +91,10 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return getResources().getText(R.string.home_tab);
-                case 1:
-                    return getResources().getText(R.string.pizza_tab);
-                case 2:
-                    return getResources().getText(R.string.pasta_tab);
-                case 3:
-                    return getResources().getText(R.string.store_tab);
-                case 4:
-                    return "Appetizers";
-            }
-            return null;
+            String[] titles = getResources().getStringArray(R.array.tab_titles);
+            return titles[position];
         }
     }
-
 }
 
 
