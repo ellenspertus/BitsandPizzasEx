@@ -15,6 +15,11 @@
         <item>Lasagne</item>
     </string-array>
 
+    <string-array name="appetizers">
+        <item>BreadSticks</item>
+        <item>Blooming Onion</item>
+    </string-array>
+
     <string-array name="stores">
         <item>Cambridge</item>
         <item>Sebastopol</item>
