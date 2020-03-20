@@ -20,11 +20,22 @@
         <item>Sebastopol</item>
     </string-array>
 
+    <string-array name="appetizer">
+        <item>Breadsticks</item>
+        <item>Cheesy Breadsticks</item>
+    </string-array>
+
     <string name="home_tab">Home</string>
     <string name="pizza_tab">Pizzas</string>
     <string name="pasta_tab">Pasta</string>
     <string name="store_tab">Stores</string>
+    <string name="appetizers_tab">Appies</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="options">
+        <item>Home</item>
+        <item>Pizzas</item>
+        <item>Pasta</item>
+        <item>Stores</item>
+        <item>Appies</item>
+    </string-array>
 </resources>
